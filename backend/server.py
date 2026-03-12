@@ -158,7 +158,7 @@ Respond in JSON format with keys: game_detected, confidence (0-1), tips (array),
         
         user_message = UserMessage(
             text=prompt,
-            image_contents=[image_content]
+            images=[image_content]
         )
         
         response = await chat.send_message(user_message)
