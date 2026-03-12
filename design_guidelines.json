@@ -1,0 +1,128 @@
+{
+  "identity": {
+    "name": "E1 - The Anti-AI Designer",
+    "mission": "Create a 'Tactical HUD' interface that feels like a gaming peripheral, not a SaaS dashboard.",
+    "principles": [
+      "Fusion: Mix 'Military HUD' precision with 'Cyberpunk' aesthetics.",
+      "Emotion: The user is an operator; the app is their exoskeleton.",
+      "Content: Data must be instant. No fluff. High contrast.",
+      "Dark Mode Only: The app lives in the dark.",
+      "Sharpness: No soft roundness. Angles and 1px borders."
+    ]
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Chivo, sans-serif",
+      "body": "Manrope, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "weights": {
+      "heading": "900",
+      "body": "400",
+      "bold": "700"
+    },
+    "usage": {
+      "h1": "font-heading font-black text-5xl tracking-tighter uppercase",
+      "h2": "font-heading font-bold text-3xl tracking-tight uppercase",
+      "h3": "font-heading font-bold text-xl tracking-wide text-accent",
+      "body": "font-body text-base text-gray-300 leading-relaxed",
+      "caption": "font-mono text-xs text-gray-500 uppercase tracking-widest",
+      "data": "font-mono text-sm text-cyan-400"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#050505",
+      "surface": "#0A0A0A",
+      "surface_highlight": "#121212",
+      "border": "#262626",
+      "primary": "#00F0FF",
+      "secondary": "#7000FF",
+      "success": "#00FF94",
+      "warning": "#FFD600",
+      "error": "#FF003C",
+      "text_main": "#FFFFFF",
+      "text_muted": "#A3A3A3"
+    },
+    "gradients": {
+      "hero": "linear-gradient(135deg, #050505 0%, #0A0A0A 100%)",
+      "glow": "radial-gradient(circle at center, rgba(0, 240, 255, 0.15) 0%, transparent 70%)",
+      "cyber_border": "linear-gradient(90deg, transparent, #00F0FF, transparent)"
+    },
+    "usage_rules": {
+      "background": "Always #050505. Never pure black #000000.",
+      "text": "High contrast. Headings are White. Body is #A3A3A3.",
+      "accents": "Use Cyan (#00F0FF) for 'Intelligence/AI' and Violet (#7000FF) for 'Magic/Premium'.",
+      "borders": "1px solid #262626. Active borders glow with Primary color."
+    }
+  },
+  "layout": {
+    "spacing": {
+      "base": "0.25rem",
+      "container_padding": "p-6 md:p-12",
+      "section_gap": "gap-8 md:gap-16"
+    },
+    "grid": {
+      "dashboard": "grid grid-cols-1 md:grid-cols-12 gap-4",
+      "bento_hero": "col-span-12 md:col-span-8 row-span-2",
+      "bento_side": "col-span-12 md:col-span-4 row-span-1"
+    },
+    "container": {
+      "max_width": "max-w-7xl mx-auto",
+      "glass_panel": "bg-black/40 backdrop-blur-xl border border-white/10"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-black font-bold uppercase tracking-wider hover:bg-cyan-300 transition-all clip-path-angle",
+      "secondary": "bg-transparent border border-white/20 text-white hover:border-primary hover:text-primary transition-all",
+      "ghost": "text-gray-400 hover:text-white hover:bg-white/5"
+    },
+    "cards": {
+      "base": "bg-surface border border-border p-6 relative overflow-hidden group",
+      "hover_effect": "group-hover:border-primary/50 transition-colors duration-300",
+      "glass": "bg-black/60 backdrop-blur-md border border-white/10"
+    },
+    "inputs": {
+      "base": "bg-black/50 border border-white/10 text-white placeholder:text-gray-600 focus:border-primary focus:ring-1 focus:ring-primary rounded-none"
+    },
+    "overlays": {
+      "game_hud": "fixed top-4 right-4 w-80 bg-black/80 backdrop-blur-xl border-l-2 border-primary p-4 shadow-[0_0_30px_rgba(0,0,0,0.5)]"
+    }
+  },
+  "assets": {
+    "hero_bg": "https://images.unsplash.com/photo-1643858988729-b4c855c09a37?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwxfHxjeWJlcnB1bmslMjBjaXR5JTIwbmlnaHQlMjBnYW1lciUyMHNldHVwfGVufDB8fHx8MTc3MzM0MzAzN3ww&ixlib=rb-4.1.0&q=85",
+    "gamer_context": "https://images.unsplash.com/photo-1726442131094-4fe2fa8e7d94?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwzfHxjeWJlcnB1bmslMjBjaXR5JTIwbmlnaHQlMjBnYW1lciUyMHNldHVwfGVufDB8fHx8MTc3MzM0MzAzN3ww&ixlib=rb-4.1.0&q=85",
+    "city_vibe": "https://images.unsplash.com/photo-1531113165519-5eb0816d7e02?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwyfHxjeWJlcnB1bmslMjBjaXR5JTIwbmlnaHQlMjBnYW1lciUyMHNldHVwfGVufDB8fHx8MTc3MzM0MzAzN3ww&ixlib=rb-4.1.0&q=85",
+    "abstract_light": "https://images.unsplash.com/photo-1616793958347-3e41632671d5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHw0fHxlc3BvcnRzJTIwdG91cm5hbWVudCUyMHNjcmVlbiUyMGdhbWVwbGF5fGVufDB8fHx8MTc3MzM0MzA2M3ww&ixlib=rb-4.1.0&q=85",
+    "gaming_neon": "https://images.unsplash.com/photo-1546443046-ed1ce6ffd1ab?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwyfHx2aWRlbyUyMGdhbWUlMjBzY3JlZW4lMjBzdHJhdGVneSUyMGZwcyUyMHJwZ3xlbnwwfHx8fDE3NzMzNDMwNDJ8MA&ixlib=rb-4.1.0&q=85"
+  },
+  "motion": {
+    "library": "framer-motion",
+    "transitions": {
+      "default": { "duration": 0.3, "ease": "easeOut" },
+      "spring": { "type": "spring", "stiffness": 300, "damping": 30 }
+    },
+    "variants": {
+      "fadeIn": {
+        "initial": { "opacity": 0, "y": 20 },
+        "animate": { "opacity": 1, "y": 0 }
+      },
+      "slideInRight": {
+        "initial": { "x": 100, "opacity": 0 },
+        "animate": { "x": 0, "opacity": 1 }
+      }
+    }
+  },
+  "universal_guidelines": [
+    "NO ROUNDED CORNERS: Use 'rounded-none' or 'rounded-sm' max. This is a machine, not a pillow.",
+    "NO WHITE BACKGROUNDS: The app must be dark mode by default.",
+    "DATA DENSITY: Dashboards should be dense. Use 'text-xs' and 'text-sm' for data.",
+    "GLOW EFFECTS: Use subtle drop-shadows with color (e.g., shadow-cyan-500/20) to create depth.",
+    "MONOSPACE NUMBERS: Always use 'font-mono' for numbers, stats, and timers.",
+    "TESTING: All interactive elements must have 'data-testid'.",
+    "TOASTS: Use 'sonner' for notifications.",
+    "ICONS: Use 'lucide-react' with thin strokes (stroke-width={1.5})."
+  ],
+  "instructions_to_main_agent": "1. Install 'framer-motion' and 'lucide-react'. 2. Configure Tailwind with the colors provided. 3. Create a 'Layout' component that enforces the dark theme and background. 4. Build the 'GameHUD' component as a draggable overlay using the 'glass_panel' styles. 5. Use the provided image URLs for the Landing Page hero and feature sections."
+}
