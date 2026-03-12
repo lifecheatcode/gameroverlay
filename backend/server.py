@@ -252,7 +252,7 @@ Be concise, helpful, and focus on actionable advice."""
             image_content = ImageContent(image_base64=request.image_base64)
             user_message = UserMessage(
                 text=request.message,
-                images=[image_content]
+                file_contents=[image_content]
             )
         else:
             user_message = UserMessage(text=request.message)
