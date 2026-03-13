@@ -71,11 +71,11 @@ const Dashboard = () => {
   // Voices available - Dragon Ball Z Characters
   const voices = [
     { id: "alloy", name: "Goku", preview: "Alright! I'm Goku! Let's power up and win this game together! Kamehameha!" },
-    { id: "nova", name: "Vegeta", preview: "I am the prince of all Saiyans! Your gameplay is pathetic, but I'll make you a warrior!" },
-    { id: "onyx", name: "Piccolo", preview: "Hmph. Focus. Clear your mind. I'll guide you to victory with superior tactics." },
+    { id: "onyx", name: "Vegeta", preview: "I am the prince of all Saiyans! Your gameplay is pathetic, but I'll make you a warrior!" },
+    { id: "echo", name: "Piccolo", preview: "Hmph. Focus. Clear your mind. I'll guide you to victory with superior tactics." },
     { id: "shimmer", name: "Bulma", preview: "Hey there! I'm the genius Bulma! Let me analyze this game and give you the smartest strategy!" },
-    { id: "echo", name: "Frieza", preview: "Oh my, how delightful. I shall help you crush your opponents. No one escapes my wrath!" },
-    { id: "fable", name: "Lord Beerus", preview: "I am Beerus, God of Destruction. Entertain me with your gameplay, or face annihilation!" }
+    { id: "fable", name: "Frieza", preview: "Oh my, how delighthat. I shall help you crush your opponents. No one escapes my wrath, oh ho ho ho!" },
+    { id: "nova", name: "Lord Beerus", preview: "I am Beerus, God of Destruction. Entertain me with your gameplay, or face annihilation!" }
   ];
 
   // Start screen capture
