@@ -657,8 +657,8 @@ const Dashboard = () => {
                 {/* Voice Selection */}
                 {voiceEnabled && (
                   <div>
-                    <h3 className="font-body font-semibold text-white mb-2">Voice</h3>
-                    <p className="font-body text-xs text-gray-500 mb-2">Click a voice to preview</p>
+                    <h3 className="font-body font-semibold text-white mb-2">Voice Character</h3>
+                    <p className="font-body text-xs text-gray-500 mb-2">Click to hear each character</p>
                     <div className="grid grid-cols-2 gap-2">
                       {voices.map((v) => (
                         <button
@@ -666,12 +666,12 @@ const Dashboard = () => {
                           data-testid={`voice-option-${v.id}`}
                           onClick={async () => {
                             setSelectedVoice(v.id);
-                            // Preview the voice
+                            // Preview the voice with character line
                             try {
                               const response = await axios.post(
                                 `${API}/tts`,
                                 {
-                                  text: `Hi, I'm ${v.id}. I'll be your gaming assistant.`,
+                                  text: v.preview,
                                   voice: v.id,
                                   speed: 1.0
                                 },
@@ -694,7 +694,7 @@ const Dashboard = () => {
                         >
                           <div className="flex items-center gap-2">
                             <Volume2 className={`w-4 h-4 ${selectedVoice === v.id ? 'text-cyan-primary' : 'text-gray-500'}`} strokeWidth={1.5} />
-                            <span className="font-body text-sm">{v.name}</span>
+                            <span className="font-body text-sm font-semibold">{v.name}</span>
                           </div>
                         </button>
                       ))}
