@@ -658,18 +658,47 @@ const Dashboard = () => {
                 {voiceEnabled && (
                   <div>
                     <h3 className="font-body font-semibold text-white mb-2">Voice</h3>
-                    <Select value={selectedVoice} onValueChange={setSelectedVoice}>
-                      <SelectTrigger data-testid="voice-select" className="bg-void border-border-default text-white">
-                        <SelectValue placeholder="Select voice" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {voices.map((v) => (
-                          <SelectItem key={v.id} value={v.id}>
-                            {v.name}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                    <p className="font-body text-xs text-gray-500 mb-2">Click a voice to preview</p>
+                    <div className="grid grid-cols-2 gap-2">
+                      {voices.map((v) => (
+                        <button
+                          key={v.id}
+                          data-testid={`voice-option-${v.id}`}
+                          onClick={async () => {
+                            setSelectedVoice(v.id);
+                            // Preview the voice
+                            try {
+                              const response = await axios.post(
+                                `${API}/tts`,
+                                {
+                                  text: `Hi, I'm ${v.id}. I'll be your gaming assistant.`,
+                                  voice: v.id,
+                                  speed: 1.0
+                                },
+                                { responseType: "blob" }
+                              );
+                              const audioUrl = URL.createObjectURL(response.data);
+                              if (audioRef.current) {
+                                audioRef.current.src = audioUrl;
+                                audioRef.current.play();
+                              }
+                            } catch (err) {
+                              console.error("Voice preview error:", err);
+                            }
+                          }}
+                          className={`p-3 text-left transition-all duration-200 border ${
+                            selectedVoice === v.id
+                              ? 'bg-cyan-primary/20 border-cyan-primary text-white'
+                              : 'bg-void border-border-default text-gray-400 hover:border-gray-500'
+                          }`}
+                        >
+                          <div className="flex items-center gap-2">
+                            <Volume2 className={`w-4 h-4 ${selectedVoice === v.id ? 'text-cyan-primary' : 'text-gray-500'}`} strokeWidth={1.5} />
+                            <span className="font-body text-sm">{v.name}</span>
+                          </div>
+                        </button>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
